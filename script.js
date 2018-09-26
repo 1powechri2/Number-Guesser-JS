@@ -29,6 +29,7 @@ document.getElementById('range_button').onclick = function(){
     document.getElementById('answer-4').innerHTML = '';
     document.getElementById('min_max').style.display = "none"
     document.getElementById('reset_button').disabled = false;
+    document.getElementById('reset_button').style.backgroundColor = '#929497'
   }
 };
 
@@ -36,19 +37,24 @@ var counter = 0;
 
 
 document.getElementById('clear_button').disabled = true;
+document.getElementById('clear_button').style.backgroundColor = '#D0D2D3'
 document.getElementById('reset_button').disabled = true;
+document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
 
 document.getElementById('number_field').onkeyup = function(){
   if (document.getElementById('number_field').value.length == 0) {
     document.getElementById('clear_button').disabled = true;
+    document.getElementById('clear_button').style.backgroundColor = '#D0D2D3'
   } else {
     document.getElementById('clear_button').disabled = false;
+    document.getElementById('clear_button').style.backgroundColor = '#929497';
   }
 };
 
 document.getElementById('reset_button').onclick = function(){
   counter = 0;
   document.getElementById('reset_button').disabled = true;
+  document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
   document.getElementById('answer-1').innerHTML = 'The Game Has Been Reset';
   document.getElementById('answer-num').innerHTML = '';
   document.getElementById('answer-2').innerHTML = 'The Maximum Possible Answer';

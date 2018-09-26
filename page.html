@@ -3,6 +3,7 @@
   <head>
     <title>Number Guesser</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <div class='container'>
     <header id='header'>
@@ -15,15 +16,15 @@
           <span id='max'><input type='text' id='max_number' placeholder='Maximum Value'></span>
         </div>
         <div id='set_range_button'>
-          <div id='set_range'><button id='range_button'>Set Range</div>
+          <button id='range_button'>Set Range</button>
         </div>
       </div>
       <div id='number_field_div'>
         <div id='number'><input type='text' id='number_field' placeholder='Enter Your Guess'></div>
       </div>
       <div id='number_field_buttons'>
-        <span id='guess_number'><button id='guess_button' onkeyup='fieldEmpty()'>Guess</span>
-        <span id='clear_number'><button id='clear_button'>Clear</span>
+        <span id='guess_number'><button id='guess_button'>Guess</button></span>
+        <span id='clear_number'><button id='clear_button'>Clear</button></span>
       </div>
       <div class='answer_field'>
         <p id='answer-1'>Welcome To Number Guesser<p><br>
@@ -32,7 +33,7 @@
         <p id='answer-3'>Maximum Value In Order To <br>
         <p id='answer-4'>Generate a Random Value<br>
       </div>
-      <div id='reset_game'><button id='reset_button'>Reset</div>
+      <div id='reset_game'><button id='reset_button'>Reset</button></div>
       <script src="script.js"></script>
     </body>
   </div>
