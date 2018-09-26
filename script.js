@@ -1,7 +1,10 @@
-var min = 0
-var max = 10
+var number = 0
+var counter = 0;
 
-
+document.getElementById('clear_button').disabled = true;
+document.getElementById('clear_button').style.backgroundColor = '#D0D2D3'
+document.getElementById('reset_button').disabled = true;
+document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
 
 document.getElementById('range_button').onclick = function(){
   min = document.getElementById('min_number').value;
@@ -10,7 +13,7 @@ document.getElementById('range_button').onclick = function(){
   min = parseInt(min)
   max = parseInt(max)
 
-  var number = Math.floor(Math.random() * (max - min) + min);
+  number = Math.floor(Math.random() * (max - min) + min);
 
   if (min > max) {
     document.getElementById('answer-1').innerHTML = 'The Minimum Value Is';
@@ -33,14 +36,6 @@ document.getElementById('range_button').onclick = function(){
   }
 };
 
-var counter = 0;
-
-
-document.getElementById('clear_button').disabled = true;
-document.getElementById('clear_button').style.backgroundColor = '#D0D2D3'
-document.getElementById('reset_button').disabled = true;
-document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
-
 document.getElementById('number_field').onkeyup = function(){
   if (document.getElementById('number_field').value.length == 0) {
     document.getElementById('clear_button').disabled = true;
@@ -49,21 +44,6 @@ document.getElementById('number_field').onkeyup = function(){
     document.getElementById('clear_button').disabled = false;
     document.getElementById('clear_button').style.backgroundColor = '#929497';
   }
-};
-
-document.getElementById('reset_button').onclick = function(){
-  counter = 0;
-  document.getElementById('reset_button').disabled = true;
-  document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
-  document.getElementById('answer-1').innerHTML = 'The Game Has Been Reset';
-  document.getElementById('answer-num').innerHTML = '';
-  document.getElementById('answer-2').innerHTML = 'The Maximum Possible Answer';
-  document.getElementById('answer-3').innerHTML = 'Has Been Reset To Ten';
-  document.getElementById('answer-4').innerHTML = ''
-}
-
-document.getElementById('reset_game').onclick = function(){
-  document.getElementById('min_max').style.display = "block";
 };
 
 document.getElementById('clear_number').onclick = function(){
@@ -118,4 +98,16 @@ document.getElementById('guess_number').onclick = function(){
     counter = 0
   }
   document.getElementById('number_field').value = ''
+};
+
+document.getElementById('reset_button').onclick = function(){
+  counter = 0;
+  document.getElementById('reset_button').disabled = true;
+  document.getElementById('reset_button').style.backgroundColor = '#D0D2D3'
+  document.getElementById('answer-1').innerHTML = 'The Game Has Been Reset';
+  document.getElementById('answer-num').innerHTML = '';
+  document.getElementById('answer-2').innerHTML = 'The Maximum Possible Answer';
+  document.getElementById('answer-3').innerHTML = 'Has Been Reset To Ten';
+  document.getElementById('answer-4').innerHTML = ''
+  document.getElementById('min_max').style.display = "block";
 };
